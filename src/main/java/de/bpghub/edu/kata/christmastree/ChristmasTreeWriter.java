@@ -1,4 +1,4 @@
-package de.bpgit.edu.kata.christmastree;
+package de.bpghub.edu.kata.christmastree;
 
 public class ChristmasTreeWriter {
 

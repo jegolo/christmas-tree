@@ -1,4 +1,4 @@
-package de.bpgit.edu.kata.christmastree;
+package de.bpghub.edu.kata.christmastree;
 
 import static org.junit.jupiter.api.Assertions.*;
 
