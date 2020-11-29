@@ -7,6 +7,13 @@ public class ChristmasTreeWriter {
             return "";
         } else if (height==1) {
             return "^\n";
-        } else throw new RuntimeException("Not implemented");
+        } else if (height==2) {
+            var builder = new StringBuilder();
+            builder.append(" ^\n");
+            builder.append("/ \\\n");
+            return builder.toString();
+        } else {
+            throw new RuntimeException("Not implemented");
+        }
     }
 }

@@ -34,4 +34,20 @@ class ChristmasTreeWriterTest {
                        """;
         assertEquals(expected, result);
     }
+
+    @Test
+    void testOfSizeTwo() {
+        //Prepare
+        var christmasTreeWriter = new ChristmasTreeWriter();
+        //Given
+        int height = 2;
+        //When
+        var result = christmasTreeWriter.writeTree(height);
+        //Then
+        var expected = """
+                        ^
+                       / \\ 
+                       """;
+        assertEquals(expected, result);
+    }
 }
