@@ -15,6 +15,7 @@ class ChristmasTreeWriterTest {
         //When
         var result = christmasTreeWriter.writeTree(height);
         //Then
+        System.out.println(result);
         var expected = "";
         assertEquals(expected, result);
         //Cleanup
@@ -29,6 +30,7 @@ class ChristmasTreeWriterTest {
         //When
         var result = christmasTreeWriter.writeTree(height);
         //Then
+        System.out.println(result);
         var expected = """
                        ^
                        """;
@@ -44,10 +46,31 @@ class ChristmasTreeWriterTest {
         //When
         var result = christmasTreeWriter.writeTree(height);
         //Then
+        System.out.println(result);
         var expected = """
                         ^
                        / \\ 
                        """;
         assertEquals(expected, result);
     }
+
+    @Test
+    void testOfSizeThree() {
+        //Prepare
+        var christmasTreeWriter = new ChristmasTreeWriter();
+        //Given
+        int height = 3;
+        //When
+        var result = christmasTreeWriter.writeTree(height);
+        //Then
+        System.out.println(result);
+        var expected = """
+                         ^
+                        / \\
+                       /   \\
+                         #   
+                       """;
+        assertEquals(expected, result);
+    }
+
 }
