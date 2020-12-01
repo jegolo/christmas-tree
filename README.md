@@ -8,18 +8,20 @@
 3. Erzeuge ein Baum mit der Höhe 2
          
          ^
-        /_\ 
+        / \ 
 4. Erzeuge ein Baum mit der Höhe 3, ab Höhe drei bekommt der Baum ein Stamm
   
          ^
         / \
-       /_ _\
+       /   \
          #
 5 . Erzeuge ein Baum mit der Höhe 4 z.b N
    
          ^
         / \
        /   \
-      /__ __\
+      /     \
          #
- 6. Refactor baue eine generische Lösung
+ 6. Refactor baue eine generische Lösung für Höhe 5
+ 
+ 7. Refactor baue nun eine komplett generische Lösung
