@@ -6,20 +6,19 @@ public class ChristmasTreeWriter {
         return rekuTree(0, height);
     }
 
-    public String rekuTree(int row, int height) {
-        String result;
+    private String rekuTree(int row, int height) {
+        String result = "";
         if (row == height) {
             if (height > 2) {
-                result= " ".repeat(((row - 1) * 2 + 1)/2).concat("#\n");
-            } else {
-                result = "";
+                result = " ".repeat(((row - 1) * 2 + 1) / 2).concat("#\n");
             }
-        } else if (row == 0) {
-            result = " ".repeat(height - 1).concat("^\n");
-            result = result.concat(rekuTree(row+1, height));
         } else {
-            result = " ".repeat(height - (row +1)).concat("/").concat(" ".repeat(((row - 1) * 2 + 1))).concat("\\\n");
-            result = result.concat(rekuTree(row +1, height));
+            if (row == 0) {
+                result = " ".repeat(height - 1).concat("^\n");
+            } else {
+                result = " ".repeat(height - (row +1)).concat("/").concat(" ".repeat(((row - 1) * 2 + 1))).concat("\\\n");
+            }
+            result = result.concat(rekuTree(row+1, height));
         }
         return  result;
     }
