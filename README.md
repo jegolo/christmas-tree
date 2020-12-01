@@ -15,10 +15,11 @@
         / \
        /_ _\
          #
-5 . Erzeuge ein Baum mit der Höhe n z.b N
+5 . Erzeuge ein Baum mit der Höhe 4 z.b N
    
          ^
         / \
        /   \
       /__ __\
          #
+ 6. Refactor baue eine generische Lösung

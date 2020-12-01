@@ -20,14 +20,34 @@ public class ChristmasTreeWriter {
         } else if (height == 4) {
             String builder =
                     "   ^\n" + // 3 Blanks; Carpet  (height - 1);
-                    "  / \\\n" + //height -2 Blank ; Slash ; 1 Blank; Backslash
-                    " /   \\\n" + //height -3; 3 Blanks; Backslash
-                    "/     \\\n" + //height -4; 5 Blanks; Backslash
-                    "   #\n";  //height -1 blanks
+                            "  / \\\n" + //height -2 Blank ; Slash ; 1 Blank; Backslash
+                            " /   \\\n" + //height -3; 3 Blanks; Backslash
+                            "/     \\\n" + //height -4; 5 Blanks; Backslash
+                            "   #\n";  //height -1 blanks
             return builder;
+        } else if (height == 5) {
+            return rekuTree(0, height);
         } else {
             throw new RuntimeException("Not implemented");
         }
     }
 
+
+    public String rekuTree(int row, int height) {
+        String result;
+        if (row == height) {
+            if (height > 2) {
+                result= " ".repeat(((row - 1) * 2 + 1)/2).concat("#\n");
+            } else {
+                result = "";
+            }
+        } else if (row == 0) {
+            result = " ".repeat(height - 1).concat("^\n");
+            result = result.concat(rekuTree(row+1, height));
+        } else {
+            result = " ".repeat(height - (row +1)).concat("/").concat(" ".repeat(((row - 1) * 2 + 1))).concat("\\\n");
+            result = result.concat(rekuTree(row +1, height));
+        }
+        return  result;
+    }
 }
