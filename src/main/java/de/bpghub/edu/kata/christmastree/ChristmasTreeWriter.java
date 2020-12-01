@@ -7,19 +7,37 @@ public class ChristmasTreeWriter {
     }
 
     private String rekuTree(int row, int height) {
-        String result = "";
+        String result;
         if (row == height) {
-            if (height > 2) {
-                result = " ".repeat(((row - 1) * 2 + 1) / 2).concat("#\n");
-            }
+            result = addStamm(row, height);
         } else {
             if (row == 0) {
-                result = " ".repeat(height - 1).concat("^\n");
+                result = addSpitze(height);
             } else {
-                result = " ".repeat(height - (row +1)).concat("/").concat(" ".repeat(((row - 1) * 2 + 1))).concat("\\\n");
+                result = addBody(row, height);
             }
             result = result.concat(rekuTree(row+1, height));
         }
         return  result;
+    }
+
+    private String addBody(int row, int height) {
+        String result;
+        result = " ".repeat(height - (row +1)).concat("/").concat(" ".repeat(((row - 1) * 2 + 1))).concat("\\\n");
+        return result;
+    }
+
+    private String addSpitze(int height) {
+        String result;
+        result = " ".repeat(height - 1).concat("^\n");
+        return result;
+    }
+
+    private String addStamm(int row, int height) {
+        String result="";
+        if (height > 2) {
+            result = " ".repeat(((row - 1) * 2 + 1) / 2).concat("#\n");
+        }
+        return result;
     }
 }
