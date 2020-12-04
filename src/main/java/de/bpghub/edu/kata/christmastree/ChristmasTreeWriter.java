@@ -10,6 +10,12 @@ public class ChristmasTreeWriter {
                        ^
                       / \\
                       """;
+            case 3 -> """
+                        ^
+                       / \\
+                      /   \\
+                        #
+                      """;
             default -> throw new RuntimeException("Method not implemented");
         };
     }
