@@ -16,5 +16,7 @@ class ChristmasTreeWriterTest {
         var expected = "";
         assertEquals(expected, result);
         //Cleanup
+        //Hallo Welt!
+        //Hallo Echo
     }
 }
