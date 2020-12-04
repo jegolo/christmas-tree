@@ -12,6 +12,7 @@ class ChristmasTreeWriterTest {
         int height = 0;
         //When
         var result = christmasTreeWriter.writeTree(height);
+        System.out.println(result);
         //Then
         var expected = "";
         assertEquals(expected, result);
@@ -28,6 +29,7 @@ class ChristmasTreeWriterTest {
         int height = 1;
         //When
         var result = christmasTreeWriter.writeTree(height);
+        System.out.println(result);
         //Then
         var expected = "^";
         assertEquals(expected, result);
@@ -43,6 +45,7 @@ class ChristmasTreeWriterTest {
         int height = 2;
         //When
         var result = christmasTreeWriter.writeTree(height);
+        System.out.println(result);
         //Then
         var expected = """
                         ^
@@ -62,6 +65,7 @@ class ChristmasTreeWriterTest {
         int height = 3;
         //When
         var result = christmasTreeWriter.writeTree(height);
+        System.out.println(result);
         //Then
         var expected = """
                          ^
