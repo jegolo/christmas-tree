@@ -19,4 +19,20 @@ class ChristmasTreeWriterTest {
         //Hallo Welt!
         //Hallo Echo
     }
+
+    @org.junit.jupiter.api.Test
+    void treeOfSizeOneShouldBeTop() {
+        //Prepare
+        var christmasTreeWriter = new ChristmasTreeWriter();
+        //Given
+        int height = 1;
+        //When
+        var result = christmasTreeWriter.writeTree(height);
+        //Then
+        var expected = "^";
+        assertEquals(expected, result);
+        //Cleanup
+        //Hallo Welt!
+        //Hallo Echo
+    }
 }
